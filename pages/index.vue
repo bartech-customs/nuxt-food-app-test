@@ -1,12 +1,18 @@
 <template>
   <main class="container">
     <AppHeader />
-    <AppRestaurantInfo />
+    <AppRestaurantInfo :datasource="fooddata" />
   </main>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    fooddata() {
+      return this.$store.state.fooddata;
+    }
+  }
+};
 </script>
 
 <style></style>
